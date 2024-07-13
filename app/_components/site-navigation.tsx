@@ -1,8 +1,7 @@
 "use client"
 
-import { useEffect, useState } from "react"
-
 import { cn } from "@/lib/utils"
+import { useIsScrolled } from "@/hooks/use-is-scrolled"
 
 const NAV_ITEMS = [
   { title: "About", link: "#about" },
@@ -12,13 +11,7 @@ const NAV_ITEMS = [
 ]
 
 export function SiteNavigation() {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setIsScrolled(window.scrollY > 0)
-    })
-  }, [])
+  const { isScrolled } = useIsScrolled()
 
   return (
     <nav
