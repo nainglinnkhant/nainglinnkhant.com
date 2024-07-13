@@ -1,3 +1,5 @@
+import { About } from "./_components/about"
+import { Experience } from "./_components/experience"
 import { Landing } from "./_components/landing"
 import { SiteNavigation } from "./_components/site-navigation"
 
@@ -9,6 +11,8 @@ export default function Home() {
       </header>
       <main className="bg-[#111010]">
         <Landing />
+        <About />
+        <Experience />
       </main>
     </>
   )

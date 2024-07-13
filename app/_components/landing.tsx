@@ -8,7 +8,7 @@ import { GlobeDialog } from "./globe-dialog"
 
 export function Landing() {
   return (
-    <div className="relative">
+    <section id="about" className="relative">
       <Spotlight
         className="md:-top-20 md:left-20 lg:-top-0 lg:left-[50] xl:-top-20 xl:left-60"
         fill="white"
@@ -45,6 +45,6 @@ export function Landing() {
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

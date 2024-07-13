@@ -20,7 +20,7 @@ export function SiteNavigation() {
     >
       <ul
         className={cn(
-          "flex rounded-full border bg-background px-3.5 py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/70",
+          "flex rounded-full border bg-background px-3.5 py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
           !isScrolled && "bg-gradient-to-r from-neutral-900 to-background"
         )}
       >

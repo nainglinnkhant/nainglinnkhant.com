@@ -81,3 +81,7 @@
 ::selection {
   background: rgb(250, 250, 250, 0.2);
 }
+
+html {
+  scroll-behavior: smooth;
+}
