@@ -1,5 +1,15 @@
+import { Landing } from "./_components/landing"
+import { SiteNavigation } from "./_components/site-navigation"
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24"></main>
+    <>
+      <header>
+        <SiteNavigation />
+      </header>
+      <main className="bg-[#111010]">
+        <Landing />
+      </main>
+    </>
   )
 }
