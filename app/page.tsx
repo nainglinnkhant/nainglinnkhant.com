@@ -1,6 +1,7 @@
 import { About } from "./_components/about"
 import { Experience } from "./_components/experience"
 import { Landing } from "./_components/landing"
+import { Projects } from "./_components/projects"
 import { SiteNavigation } from "./_components/site-navigation"
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <Landing />
         <About />
         <Experience />
+        <Projects />
       </main>
     </>
   )

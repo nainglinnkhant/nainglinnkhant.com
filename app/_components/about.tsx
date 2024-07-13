@@ -1,6 +1,6 @@
 export function About() {
   return (
-    <section className="overflow-x-hidden px-6 sm:px-16">
+    <section className="overflow-x-hidden px-6 pb-20 sm:px-16">
       <div className="mx-auto flex max-w-2xl flex-col gap-4">
         <h3 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
           About me
