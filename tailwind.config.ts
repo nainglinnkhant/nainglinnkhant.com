@@ -77,11 +77,23 @@ const config = {
             transform: "translate(-50%,-40%) scale(1)",
           },
         },
+        pulse: {
+          "0%": {
+            boxShadow: "0 0 0 0px #fb923c",
+          },
+          "50%": {
+            opacity: "1",
+          },
+          "100%": {
+            boxShadow: "0 0 0 8px rgba(0, 0, 0, 0)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         spotlight: "spotlight 2s ease .75s 1 forwards",
+        pulse: "pulse 2s infinite",
       },
     },
   },

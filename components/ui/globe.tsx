@@ -20,15 +20,15 @@ const GLOBE_CONFIG: COBEOptions = {
   baseColor: [1, 1, 1],
   markerColor: [251 / 255, 100 / 255, 21 / 255],
   glowColor: [1, 1, 1],
-  markers: [{ location: [13.7576, 100.499], size: 0.1 }],
+  markers: [],
 }
 
 export function Globe({
   className,
-  config = GLOBE_CONFIG,
+  config,
 }: {
   className?: string
-  config?: COBEOptions
+  config?: Partial<COBEOptions>
 }) {
   let phi = 0
   let width = 0
@@ -80,6 +80,7 @@ export function Globe({
     onResize()
 
     const globe = createGlobe(canvasRef.current!, {
+      ...GLOBE_CONFIG,
       ...config,
       width: width * 2,
       height: width * 2,

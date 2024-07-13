@@ -28,8 +28,9 @@ export function Landing() {
             <GlobeDialog>
               <Button
                 variant="ghost"
-                className="inline-block h-auto p-0 text-base font-bold underline hover:bg-transparent active:bg-transparent"
+                className="relative inline-block h-auto p-0 text-base font-bold underline hover:bg-transparent active:bg-transparent"
               >
+                <div className="absolute -right-1.5 -top-0.5 size-2.5 animate-pulse rounded-full bg-orange-400" />
                 Bangkok
               </Button>
             </GlobeDialog>

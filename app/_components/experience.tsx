@@ -2,6 +2,8 @@ import Image from "next/image"
 import { ExternalLink } from "lucide-react"
 
 import { getExperiences } from "@/lib/notion"
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 
 export async function Experience() {
   const experiences = await getExperiences()
@@ -33,7 +35,10 @@ export async function Experience() {
                       href={experience.companyLink}
                       target="__blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 font-semibold hover:underline"
+                      className={cn(
+                        buttonVariants({ variant: "ghost" }),
+                        "size-auto gap-1.5 self-start p-0 text-base font-semibold hover:bg-transparent hover:underline active:bg-transparent"
+                      )}
                     >
                       {experience.companyName}
                       <ExternalLink className="size-4" />
