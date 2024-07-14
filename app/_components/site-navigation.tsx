@@ -22,7 +22,7 @@ export function SiteNavigation() {
     >
       <ul
         className={cn(
-          "flex rounded-full border bg-background px-3.5 py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
+          "flex items-center gap-6 rounded-full border bg-background px-[26px] py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
           !isScrolled && "bg-gradient-to-r from-neutral-900 to-background"
         )}
       >
@@ -30,7 +30,7 @@ export function SiteNavigation() {
           <li key={item.title}>
             <Link
               href={item.link}
-              className="rounded-full px-3 py-2.5 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"
+              className="rounded-sm text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"
             >
               {item.title}
             </Link>
