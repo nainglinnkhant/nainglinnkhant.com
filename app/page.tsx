@@ -5,7 +5,7 @@ import { Projects } from "./_components/projects"
 import { SiteNavigation } from "./_components/site-navigation"
 import { Skills } from "./_components/skills"
 
-export const dynamic = "force-dynamic"
+export const revalidate = 60
 
 export default function Home() {
   return (
