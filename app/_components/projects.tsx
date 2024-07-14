@@ -76,109 +76,111 @@ export async function Projects() {
 
   return (
     <div className="overflow-x-hidden px-6 pb-20 sm:px-16">
-      <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6">
-        <h3 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <div className="mx-auto max-w-2xl">
+        <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
           Projects
         </h3>
 
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="rounded-lg bg-gradient-to-br from-neutral-500/50 to-neutral-950 to-90% p-px"
-          >
-            <MagicCard
-              wrapperClassName="rounded-lg px-4 pb-4 pt-3 bg-gradient-to-br from-neutral-900 to-neutral-950 to-90%"
-              className="flex flex-col gap-2 rounded-lg"
+        <div className="grid grid-cols-1 gap-6">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="rounded-lg bg-gradient-to-br from-neutral-500/50 to-neutral-950 to-90% p-px"
             >
-              <div className="mb-2 flex items-center justify-between">
-                <Link
-                  href={project.link!}
-                  target="__blank"
-                  rel="noopener noreferrer"
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "h-auto p-0 text-base font-semibold hover:bg-transparent hover:underline active:bg-transparent"
-                  )}
-                >
-                  {project.name}
-                </Link>
-
-                <div className="flex items-center gap-4">
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Link
-                          href={project.html_url}
-                          target="__blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            buttonVariants({ variant: "ghost" }),
-                            "h-auto p-0 hover:bg-transparent active:bg-transparent"
-                          )}
-                        >
-                          <span className="sr-only">View source code</span>
-                          <GitHubIcon className="size-4" />
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent className="bg-gradient-to-t from-neutral-800 to-neutral-950">
-                        <p>View source code</p>
-                      </TooltipContent>
-                    </Tooltip>
-
-                    <Tooltip>
-                      <TooltipTrigger asChild>
-                        <Link
-                          href={project.link!}
-                          target="__blank"
-                          rel="noopener noreferrer"
-                          className={cn(
-                            buttonVariants({ variant: "ghost" }),
-                            "h-auto p-0 hover:bg-transparent active:bg-transparent"
-                          )}
-                        >
-                          <span className="sr-only">Visit website</span>
-                          <ExternalLink className="size-4" />
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent className="bg-gradient-to-t from-neutral-800 to-neutral-950">
-                        <p>Visit website</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </div>
-              </div>
-
-              <p className="text-neutral-100">{project.description}</p>
-
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-1.5">
-                  <Star className="size-4 text-neutral-400" />
-                  <span className="text-sm font-medium text-neutral-400">
-                    {project.stargazers_count}
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-1.5">
-                  <GitFork className="size-4 text-neutral-400" />
-                  <span className="text-sm font-medium text-neutral-400">
-                    {project.forks_count}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                {project.tags?.map((tag) => (
-                  <div
-                    key={tag}
-                    className="rounded border border-neutral-700/50 bg-accent px-1.5 py-0.5 text-xs font-medium"
+              <MagicCard
+                wrapperClassName="rounded-lg px-4 pb-4 pt-3 bg-gradient-to-br from-neutral-900 to-neutral-950 to-90%"
+                className="flex flex-col gap-2 rounded-lg"
+              >
+                <div className="mb-2 flex items-center justify-between">
+                  <Link
+                    href={project.link!}
+                    target="__blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      buttonVariants({ variant: "ghost" }),
+                      "h-auto p-0 text-base font-semibold hover:bg-transparent hover:underline active:bg-transparent"
+                    )}
                   >
-                    {tag}
+                    {project.name}
+                  </Link>
+
+                  <div className="flex items-center gap-4">
+                    <TooltipProvider>
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Link
+                            href={project.html_url}
+                            target="__blank"
+                            rel="noopener noreferrer"
+                            className={cn(
+                              buttonVariants({ variant: "ghost" }),
+                              "h-auto p-0 hover:bg-transparent active:bg-transparent"
+                            )}
+                          >
+                            <span className="sr-only">View source code</span>
+                            <GitHubIcon className="size-4" />
+                          </Link>
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-gradient-to-t from-neutral-800 to-neutral-950">
+                          <p>View source code</p>
+                        </TooltipContent>
+                      </Tooltip>
+
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Link
+                            href={project.link!}
+                            target="__blank"
+                            rel="noopener noreferrer"
+                            className={cn(
+                              buttonVariants({ variant: "ghost" }),
+                              "h-auto p-0 hover:bg-transparent active:bg-transparent"
+                            )}
+                          >
+                            <span className="sr-only">Visit website</span>
+                            <ExternalLink className="size-4" />
+                          </Link>
+                        </TooltipTrigger>
+                        <TooltipContent className="bg-gradient-to-t from-neutral-800 to-neutral-950">
+                          <p>Visit website</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
                   </div>
-                ))}
-              </div>
-            </MagicCard>
-          </div>
-        ))}
+                </div>
+
+                <p className="text-neutral-100">{project.description}</p>
+
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-1.5">
+                    <Star className="size-4 text-neutral-400" />
+                    <span className="text-sm font-medium text-neutral-400">
+                      {project.stargazers_count}
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5">
+                    <GitFork className="size-4 text-neutral-400" />
+                    <span className="text-sm font-medium text-neutral-400">
+                      {project.forks_count}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  {project.tags?.map((tag) => (
+                    <div
+                      key={tag}
+                      className="rounded border border-neutral-700/50 bg-accent px-1.5 py-0.5 text-xs font-medium"
+                    >
+                      {tag}
+                    </div>
+                  ))}
+                </div>
+              </MagicCard>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
