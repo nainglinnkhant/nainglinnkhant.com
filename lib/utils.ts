@@ -8,6 +8,9 @@ export function cn(...inputs: ClassValue[]) {
 // https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent
 export function getHasTouchScreen() {
   let hasTouchScreen = false
+
+  if (!(typeof navigator === "object")) return
+
   if ("maxTouchPoints" in navigator) {
     hasTouchScreen = navigator.maxTouchPoints > 0
   } else if ("msMaxTouchPoints" in navigator) {
