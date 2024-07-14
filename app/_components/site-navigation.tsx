@@ -28,7 +28,7 @@ export function SiteNavigation() {
           <li key={item.title}>
             <a
               href={item.link}
-              className="rounded-full px-3 py-2.5 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-neutral-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"
+              className="rounded-full px-3 py-2.5 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"
             >
               {item.title}
             </a>

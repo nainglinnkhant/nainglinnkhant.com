@@ -3,6 +3,7 @@ import { Experience } from "./_components/experience"
 import { Landing } from "./_components/landing"
 import { Projects } from "./_components/projects"
 import { SiteNavigation } from "./_components/site-navigation"
+import { Skills } from "./_components/skills"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Experience />
         <Projects />
+        <Skills />
       </main>
     </>
   )

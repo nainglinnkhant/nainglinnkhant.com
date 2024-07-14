@@ -10,7 +10,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { GitHubIcon } from "@/components/github-icon"
+import { GitHubIcon } from "@/components/icons/github-icon"
 
 const PROJECTS = [
   {
