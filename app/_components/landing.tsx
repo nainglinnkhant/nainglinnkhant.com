@@ -16,13 +16,13 @@ export function Landing() {
 
       <div className="mx-auto max-w-screen-lg overflow-x-hidden px-6 sm:px-16">
         <div className="flex h-svh w-full flex-col justify-center">
-          <h1 className="text-xl font-bold text-neutral-200 lg:text-2xl">
+          <h1 className="text-center text-xl font-bold text-neutral-200 sm:text-left lg:text-2xl">
             Hello, I&apos;m Naing Linn Khant.
           </h1>
-          <h2 className="mb-8 mt-4 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-4xl font-bold text-transparent md:text-6xl lg:text-7xl">
+          <h2 className="mb-8 mt-4 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent sm:text-left md:text-6xl lg:text-7xl">
             I love building beautiful and accessible websites.
           </h2>
-          <p className="text-base font-medium text-neutral-200">
+          <p className="text-center text-base font-medium text-neutral-200 sm:text-left">
             I&apos;m a software engineer, who loves to craft things with
             TypeScript, based in{" "}
             <GlobeDialog>
@@ -39,8 +39,10 @@ export function Landing() {
 
           <Link
             href="/resume.pdf"
-            className={cn(buttonVariants(), "mt-8 self-start rounded-full")}
-            download="Naing Linn Khant (Resume)"
+            className={cn(
+              buttonVariants(),
+              "mt-8 self-center rounded-full sm:self-start"
+            )}
           >
             Resume
           </Link>

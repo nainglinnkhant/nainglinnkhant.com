@@ -25,7 +25,7 @@ export function GlobeDialog({ children }: GlobeDialogProps) {
         >
           <DialogTitle className="sr-only">Globe</DialogTitle>
           <Globe
-            className="mx-auto w-[400px] max-w-[80vw] sm:w-[500px] md:w-[600px]"
+            className="mx-auto w-[400px] max-w-[100vw] sm:w-[500px] md:w-[600px]"
             config={{ markers: [{ location: [13.7576, 100.499], size: 0.1 }] }}
           />
         </DialogContent>
