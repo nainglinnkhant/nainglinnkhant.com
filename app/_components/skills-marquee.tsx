@@ -1,11 +1,16 @@
+"use client"
+
+import { getHasTouchScreen } from "@/lib/utils"
 import Marquee from "@/components/ui/marquee"
 
 import { SKILLS } from "./skills"
 
 export function SkillsMarquee() {
+  const hasTouchScreen = getHasTouchScreen()
+
   return (
     <div className="relative mt-8 flex flex-col gap-3 overflow-hidden rounded-xl border border-neutral-700/50 bg-neutral-900 p-6 md:shadow-xl">
-      <Marquee pauseOnHover className="[--gap:1.5rem]">
+      <Marquee pauseOnHover={!hasTouchScreen} className="[--gap:1.5rem]">
         {SKILLS.map((skill) => {
           const Icon = skill.icon
 
@@ -16,7 +21,11 @@ export function SkillsMarquee() {
           )
         })}
       </Marquee>
-      <Marquee reverse pauseOnHover className="[--gap:1.5rem]">
+      <Marquee
+        reverse
+        pauseOnHover={!hasTouchScreen}
+        className="[--gap:1.5rem]"
+      >
         {SKILLS.map((skill) => {
           const Icon = skill.icon
 
