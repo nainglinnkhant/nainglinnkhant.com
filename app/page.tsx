@@ -10,7 +10,7 @@ export default function Home() {
       <header>
         <SiteNavigation />
       </header>
-      <main className="bg-[#111010]">
+      <main className="bg-neutral-950">
         <Landing />
         <About />
         <Experience />
