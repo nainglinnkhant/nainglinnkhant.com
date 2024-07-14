@@ -71,7 +71,7 @@ export const SKILLS = [
 
 export function Skills() {
   return (
-    <section id="skills" className="overflow-x-hidden px-6 pb-20 sm:px-16">
+    <section id="skills" className="overflow-x-hidden px-6 pb-32 sm:px-16">
       <div className="mx-auto max-w-2xl">
         <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
           Skills

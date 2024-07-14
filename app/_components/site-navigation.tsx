@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 import { cn } from "@/lib/utils"
 import { useIsScrolled } from "@/hooks/use-is-scrolled"
 
@@ -26,12 +28,12 @@ export function SiteNavigation() {
       >
         {NAV_ITEMS.map((item) => (
           <li key={item.title}>
-            <a
+            <Link
               href={item.link}
               className="rounded-full px-3 py-2.5 text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"
             >
               {item.title}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>

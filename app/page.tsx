@@ -1,4 +1,5 @@
 import { About } from "./_components/about"
+import { Contact } from "./_components/contact"
 import { Experience } from "./_components/experience"
 import { Landing } from "./_components/landing"
 import { Projects } from "./_components/projects"
@@ -19,7 +20,13 @@ export default function Home() {
         <Experience />
         <Projects />
         <Skills />
+        <Contact />
       </main>
+      <footer className="py-8">
+        <p className="text-center text-sm font-semibold text-neutral-400">
+          Crafted by Naing Linn Khant &copy; {new Date().getFullYear()}
+        </p>
+      </footer>
     </>
   )
 }

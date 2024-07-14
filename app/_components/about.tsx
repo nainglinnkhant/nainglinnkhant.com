@@ -1,3 +1,10 @@
+import Link from "next/link"
+
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+
+import { SOCIAL_LINKS } from "./contact"
+
 export function About() {
   return (
     <section className="overflow-x-hidden px-6 pb-20 sm:px-16">
@@ -21,6 +28,28 @@ export function About() {
           PostgreSQL, MySQL, and NestJS. I love building open-source software in
           my free time.
         </p>
+        <p>You can find me on:</p>
+        <div className="flex items-center gap-4">
+          {SOCIAL_LINKS.map((link) => {
+            const Icon = link.icon
+
+            return (
+              <Link
+                key={link.name}
+                href={link.link}
+                target="__blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ size: "icon", variant: "ghost" }),
+                  "size-auto rounded-full hover:bg-transparent active:bg-transparent"
+                )}
+              >
+                <span className="sr-only">{link.name}</span>
+                <Icon className="size-5 text-neutral-300 transition-colors duration-200 hover:text-white" />
+              </Link>
+            )
+          })}
+        </div>
       </div>
     </section>
   )
