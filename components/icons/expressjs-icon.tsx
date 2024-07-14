@@ -1,4 +1,4 @@
-export function ExpressIcon(props: React.SVGAttributes<SVGElement>) {
+export function ExpressJsIcon(props: React.SVGAttributes<SVGElement>) {
   return (
     <svg
       role="img"

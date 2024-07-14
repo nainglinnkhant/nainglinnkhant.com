@@ -1,5 +1,5 @@
 import { DrizzleIcon } from "@/components/icons/drizzle-icon"
-import { ExpressIcon } from "@/components/icons/express-icon"
+import { ExpressJsIcon } from "@/components/icons/expressjs-icon"
 import { FirebaseIcon } from "@/components/icons/firebase-icon"
 import { MySQLIcon } from "@/components/icons/mysql-icon"
 import { NestJSIcon } from "@/components/icons/nestjs-icon"
@@ -36,8 +36,8 @@ export const SKILLS = [
     icon: NodeJsIcon,
   },
   {
-    name: "Express",
-    icon: ExpressIcon,
+    name: "Express.js",
+    icon: ExpressJsIcon,
   },
   {
     name: "NestJS",
