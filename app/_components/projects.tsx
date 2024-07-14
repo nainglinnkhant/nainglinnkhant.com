@@ -75,7 +75,7 @@ export async function Projects() {
   })
 
   return (
-    <div className="overflow-x-hidden px-6 pb-20 sm:px-16">
+    <section id="projects" className="overflow-x-hidden px-6 pb-20 sm:px-16">
       <div className="mx-auto max-w-2xl">
         <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
           Projects
@@ -182,6 +182,6 @@ export async function Projects() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
