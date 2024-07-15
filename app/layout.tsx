@@ -27,7 +27,11 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     creator: "@nainglk",
-    images: ["https://nainglinnkhant-v2.vercel.app/opengraph-image.png"],
+    images: [
+      {
+        url: "https://nainglinnkhant-v2.vercel.app/opengraph-image.png",
+      },
+    ],
   },
   openGraph: {
     type: "website",
