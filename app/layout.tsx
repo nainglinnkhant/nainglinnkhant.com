@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
     creator: "@nainglk",
+    images: ["https://nainglinnkhant-v2.vercel.app/opengraph-image.png"],
   },
   openGraph: {
     type: "website",
@@ -35,6 +36,11 @@ export const metadata: Metadata = {
     siteName: TITLE,
     url: "https://nainglinnkhant-v2.vercel.app",
     locale: "en_US",
+    images: [
+      {
+        url: "https://nainglinnkhant-v2.vercel.app/opengraph-image.png",
+      },
+    ],
   },
   robots: {
     index: true,
