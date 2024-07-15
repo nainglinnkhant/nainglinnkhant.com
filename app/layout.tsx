@@ -8,8 +8,8 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const TITLE = "Naing Linn Khant"
-export const DESCRIPTION =
+const TITLE = "Naing Linn Khant"
+const DESCRIPTION =
   "Software engineer who loves crafting beautiful and accessible websites"
 
 export const metadata: Metadata = {
