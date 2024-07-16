@@ -11,6 +11,7 @@ import { ReactJsIcon } from "@/components/icons/reactjs-icon"
 import { SupabaseIcon } from "@/components/icons/supabase-icon"
 import { TailwindCSSIcon } from "@/components/icons/tailwindcss-icon"
 import { TypeScriptIcon } from "@/components/icons/typescript-icon"
+import { SectionShell } from "@/components/section-shell"
 
 import { SkillsMarquee } from "./skills-marquee"
 
@@ -71,30 +72,28 @@ export const SKILLS = [
 
 export function Skills() {
   return (
-    <section id="skills" className="overflow-x-hidden px-6 pb-32 sm:px-16">
-      <div className="mx-auto max-w-2xl">
-        <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
-          Skills
-        </h3>
+    <SectionShell id="skills" className="pb-32">
+      <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+        Skills
+      </h3>
 
-        <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
-          {SKILLS.map((skill) => {
-            const Icon = skill.icon
+      <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        {SKILLS.map((skill) => {
+          const Icon = skill.icon
 
-            return (
-              <li
-                key={skill.name}
-                className="flex select-none items-center gap-2 text-neutral-300 transition-colors duration-200 hover:text-white"
-              >
-                <Icon className="size-4" />
-                <span className="font-semibold">{skill.name}</span>
-              </li>
-            )
-          })}
-        </ul>
+          return (
+            <li
+              key={skill.name}
+              className="flex select-none items-center gap-2 text-neutral-300 transition-colors duration-200 hover:text-white"
+            >
+              <Icon className="size-4" />
+              <span className="font-semibold">{skill.name}</span>
+            </li>
+          )
+        })}
+      </ul>
 
-        <SkillsMarquee />
-      </div>
-    </section>
+      <SkillsMarquee />
+    </SectionShell>
   )
 }
