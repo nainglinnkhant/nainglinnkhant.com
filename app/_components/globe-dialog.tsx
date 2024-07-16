@@ -30,6 +30,7 @@ export function GlobeDialog({ children }: GlobeDialogProps) {
               markers: [{ location: [13.7563, 100.5018], size: 0.1 }],
               // Hard coded value to show Bangkok as the initial position
               phi: 2.9,
+              dark: 1,
             }}
           />
         </DialogContent>
