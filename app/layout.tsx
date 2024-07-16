@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -70,6 +71,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "antialiased")}>
         {children}
         <Analytics />
+        <SpeedInsights />
         <TailwindIndicator />
       </body>
     </html>
