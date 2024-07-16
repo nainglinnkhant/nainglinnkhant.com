@@ -30,7 +30,7 @@ export function Globe({
   className?: string
   config?: Partial<COBEOptions>
 }) {
-  let phi = 0
+  let phi = config?.phi ?? 0
   let width = 0
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const pointerInteracting = useRef<number | null>(null)
