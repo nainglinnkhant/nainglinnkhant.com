@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { title: "Experience", link: "#experience" },
   { title: "Projects", link: "#projects" },
   { title: "Skills", link: "#skills" },
+  { title: "Contact", link: "#contact" },
 ]
 
 export function SiteNavigation() {
@@ -18,7 +19,7 @@ export function SiteNavigation() {
   return (
     <nav
       aria-label="Site navigation"
-      className="fixed left-1/2 top-6 z-50 -translate-x-1/2"
+      className="fixed left-1/2 top-4 z-50 -translate-x-1/2"
     >
       <ul
         className={cn(
@@ -27,7 +28,7 @@ export function SiteNavigation() {
         )}
       >
         {NAV_ITEMS.map((item) => (
-          <li key={item.title}>
+          <li key={item.title} className="last:hidden last:sm:list-item">
             <Link
               href={item.link}
               className="rounded-sm text-sm font-medium text-neutral-300 transition-colors duration-200 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-100"

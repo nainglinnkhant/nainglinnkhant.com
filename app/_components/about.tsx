@@ -8,7 +8,7 @@ import { SOCIAL_LINKS } from "./contact"
 
 export function About() {
   return (
-    <SectionShell className="flex flex-col gap-4 pb-20">
+    <SectionShell className="flex flex-col gap-4">
       <h3 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         About me
       </h3>

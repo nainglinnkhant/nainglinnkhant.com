@@ -76,7 +76,7 @@ export async function Projects() {
   })
 
   return (
-    <SectionShell id="projects" className="pb-20">
+    <SectionShell id="projects" className="pt-20">
       <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         Projects
       </h3>

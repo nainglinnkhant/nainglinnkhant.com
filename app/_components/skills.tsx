@@ -72,7 +72,7 @@ export const SKILLS = [
 
 export function Skills() {
   return (
-    <SectionShell id="skills" className="pb-32">
+    <SectionShell id="skills" className="pt-20">
       <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         Skills
       </h3>

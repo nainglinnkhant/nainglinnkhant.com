@@ -11,7 +11,7 @@ export async function Experience() {
   const experiences = await getExperiences()
 
   return (
-    <SectionShell id="experience" className="pb-20">
+    <SectionShell id="experience" className="pt-20">
       <h3 className="mb-6 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         Work experience
       </h3>
