@@ -29,7 +29,7 @@ export async function getExperiences(): Promise<Experience[]> {
     .map((item) => ({
       companyName: item.company_name.title[0]?.plain_text,
       companyLink: item.company_link.rich_text[0]?.plain_text || null,
-      companyImageUrl: item.company_image.files[0]?.file.url,
+      companyImageUrl: item.company_image.url,
       position: item.position.rich_text[0]?.plain_text,
       duration: item.duration.rich_text[0]?.plain_text,
     }))
