@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import BlurFade from "@/components/ui/blur-fade"
 import { Button, buttonVariants } from "@/components/ui/button"
@@ -51,7 +52,9 @@ export function Landing() {
             className="self-center sm:self-start"
           >
             <Link
-              href="/resume.pdf"
+              href={`${siteConfig.url}/resume.pdf`}
+              target="__blank"
+              rel="noopener noreferrer"
               className={cn(buttonVariants(), "mt-8 rounded-full")}
             >
               Resume
