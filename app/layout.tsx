@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 
@@ -10,41 +11,37 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
-const TITLE = "Naing Linn Khant"
-const DESCRIPTION =
-  "Software engineer who loves crafting beautiful and accessible websites"
-
 export const metadata: Metadata = {
-  title: TITLE,
-  description: DESCRIPTION,
+  title: siteConfig.title,
+  description: siteConfig.description,
   authors: [
     {
       name: "nainglinnkhant",
-      url: "https://nainglinnkhant-v2.vercel.app",
+      url: siteConfig.url,
     },
   ],
-  metadataBase: new URL("https://nainglinnkhant-v2.vercel.app"),
+  metadataBase: new URL(siteConfig.url),
   twitter: {
     card: "summary_large_image",
-    title: TITLE,
-    description: DESCRIPTION,
+    title: siteConfig.title,
+    description: siteConfig.description,
     creator: "@nainglk",
     images: [
       {
-        url: "https://nainglinnkhant-v2.vercel.app/opengraph-image.png",
+        url: `${siteConfig.url}/opengraph-image.png`,
       },
     ],
   },
   openGraph: {
     type: "website",
-    title: TITLE,
-    description: DESCRIPTION,
-    siteName: TITLE,
-    url: "https://nainglinnkhant-v2.vercel.app",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.title,
+    url: siteConfig.url,
     locale: "en_US",
     images: [
       {
-        url: "https://nainglinnkhant-v2.vercel.app/opengraph-image.png",
+        url: `${siteConfig.url}/opengraph-image.png`,
       },
     ],
   },

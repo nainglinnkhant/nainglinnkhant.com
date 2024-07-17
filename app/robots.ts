@@ -1,3 +1,5 @@
+import { siteConfig } from "@/config/site"
+
 export default function robots() {
   return {
     rules: [
@@ -5,7 +7,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://nainglinnkhant-v2.vercel.app/sitemap.xml",
-    host: "https://nainglinnkhant-v2.vercel.app",
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+    host: siteConfig.url,
   }
 }
