@@ -27,7 +27,7 @@ export function About() {
         MySQL, and NestJS. I love building open-source software in my free time.
       </p>
       <p>You can find me on:</p>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 pb-1">
         {SOCIAL_LINKS.map((link) => {
           const Icon = link.icon
 
