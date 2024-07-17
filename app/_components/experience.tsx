@@ -27,6 +27,7 @@ export async function Experience() {
                   width={36}
                   height={36}
                   className="size-9 rounded-full border-border"
+                  unoptimized
                 />
               </div>
 

@@ -9,7 +9,7 @@ My personal website built with Next.js, TailwindCSS, shadcn/ui, Notion DB and co
 Create a `.env` file:
 
 ```bash
- cp .env.example .env
+cp .env.example .env
 ```
 
 Install dependencies and run dev server:
