@@ -35,7 +35,7 @@ export async function Experience() {
                 {experience.companyLink ? (
                   <Link
                     href={experience.companyLink}
-                    target="__blank"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className={cn(
                       buttonVariants({ variant: "ghost" }),

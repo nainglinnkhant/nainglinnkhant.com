@@ -53,7 +53,7 @@ export function Landing() {
           >
             <Link
               href={`${siteConfig.url}/resume.pdf`}
-              target="__blank"
+              target="_blank"
               rel="noopener noreferrer"
               className={cn(buttonVariants(), "mt-8 rounded-full")}
             >

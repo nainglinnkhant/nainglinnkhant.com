@@ -48,7 +48,7 @@ export function Contact() {
             <Link
               key={link.name}
               href={link.link}
-              target="__blank"
+              target="_blank"
               rel="noopener noreferrer"
               className={cn(
                 buttonVariants({ size: "icon", variant: "ghost" }),

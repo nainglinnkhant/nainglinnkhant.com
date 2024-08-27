@@ -25,14 +25,14 @@ const PROJECTS = [
       "Socket.io",
       "Express.js",
     ],
-    link: "https://scribble-delta.vercel.app",
+    link: "https://scribble.nainglinnkhant.com",
     description: (
       <>
         A drawing app which allows multiple users to draw on the same canvas in
         real-time.{" "}
         <Link
           href="https://www.youtube.com/@joshtriedcoding"
-          target="__blank"
+          target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-white"
         >
@@ -41,7 +41,7 @@ const PROJECTS = [
         made a video about it and you can watch the video{" "}
         <Link
           href="https://www.youtube.com/watch?v=p-QgenD1Yrc"
-          target="__blank"
+          target="_blank"
           rel="noopener noreferrer"
           className="underline hover:text-white"
         >
@@ -62,7 +62,7 @@ const PROJECTS = [
       "Supabase",
       "Drizzle",
     ],
-    link: "https://shadcn-view-table.vercel.app",
+    link: "https://view-table.nainglinnkhant.com",
   },
   {
     name: "react-skeleton-image",
@@ -118,7 +118,7 @@ export async function Projects() {
               <div className="mb-2 flex items-center justify-between">
                 <Link
                   href={project.link}
-                  target="__blank"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
@@ -134,7 +134,7 @@ export async function Projects() {
                       <TooltipTrigger asChild>
                         <Link
                           href={project.html_url}
-                          target="__blank"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className={cn(
                             buttonVariants({ variant: "ghost" }),
@@ -154,7 +154,7 @@ export async function Projects() {
                       <TooltipTrigger asChild>
                         <Link
                           href={project.link}
-                          target="__blank"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className={cn(
                             buttonVariants({ variant: "ghost" }),
