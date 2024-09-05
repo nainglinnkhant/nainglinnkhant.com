@@ -65,6 +65,11 @@ const PROJECTS = [
     link: "https://view-table.nainglinnkhant.com",
   },
   {
+    name: "lingua-time",
+    tags: ["TypeScript", "Next.js", "TailwindCSS", "shadcn/ui"],
+    link: "https://linguatime.nainglinnkhant.com",
+  },
+  {
     name: "react-skeleton-image",
     tags: ["React.js", "TypeScript", "Rollup"],
     link: "https://www.npmjs.com/package/react-skeleton-image",
