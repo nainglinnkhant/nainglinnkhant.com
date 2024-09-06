@@ -12,7 +12,7 @@ const BLUR_FADE_DELAY = 0.04
 
 export function Landing() {
   return (
-    <section id="about" className="relative">
+    <section id="about" className="relative overflow-hidden">
       <Spotlight
         className="md:-top-20 md:left-20 lg:-top-0 lg:left-[50] xl:-top-20 xl:left-60"
         fill="white"
