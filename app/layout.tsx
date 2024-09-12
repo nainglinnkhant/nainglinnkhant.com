@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(inter.className, "antialiased")}>
+      <body className={cn(inter.className, "bg-neutral-950 antialiased")}>
         {children}
         <Analytics />
         <SpeedInsights />

@@ -23,7 +23,7 @@ export async function Experience() {
               <div className="rounded-full border p-1">
                 <Image
                   src={experience.companyImageUrl}
-                  alt={experience.companyName}
+                  alt={`${experience.companyName} logo`}
                   width={36}
                   height={36}
                   className="size-9 rounded-full border-border"

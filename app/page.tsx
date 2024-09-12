@@ -14,7 +14,7 @@ export default function Home() {
       <header>
         <SiteNavigation />
       </header>
-      <main className="bg-neutral-950">
+      <main>
         <Landing />
         <About />
         <Experience />

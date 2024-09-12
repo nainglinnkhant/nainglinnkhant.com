@@ -17,13 +17,10 @@ export function SiteNavigation() {
   const { isScrolled } = useIsScrolled()
 
   return (
-    <nav
-      aria-label="Site navigation"
-      className="fixed left-1/2 top-4 z-50 -translate-x-1/2"
-    >
+    <nav aria-label="Site navigation" className="fixed z-50 w-screen">
       <ul
         className={cn(
-          "flex items-center gap-4 rounded-full border bg-background px-[22px] py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
+          "absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-4 rounded-full border bg-background px-[22px] py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
           !isScrolled && "bg-gradient-to-r from-neutral-900 to-background"
         )}
       >
