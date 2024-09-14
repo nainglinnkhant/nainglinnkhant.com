@@ -6,7 +6,12 @@ import {
   DialogTitle,
 } from "@radix-ui/react-dialog"
 
-import { Dialog, DialogOverlay, DialogTrigger } from "@/components/ui/dialog"
+import {
+  Dialog,
+  DialogDescription,
+  DialogOverlay,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import { Globe } from "@/components/ui/globe"
 
 interface GlobeDialogProps {
@@ -24,6 +29,9 @@ export function GlobeDialog({ children }: GlobeDialogProps) {
           className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2"
         >
           <DialogTitle className="sr-only">Globe</DialogTitle>
+          <DialogDescription className="sr-only">
+            A globe that marks the location of Thailand.
+          </DialogDescription>
           <Globe
             className="mx-auto w-[400px] max-w-[100vw] sm:w-[500px] md:w-[600px]"
             config={{
