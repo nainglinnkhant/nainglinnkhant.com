@@ -36,6 +36,8 @@ export function Landing() {
               TypeScript, based in{" "}
               <GlobeDialog>
                 <Button
+                  type="button"
+                  aria-label="Open globe dialog"
                   variant="ghost"
                   className="relative inline-block h-auto p-0 text-base font-bold underline hover:bg-transparent active:bg-transparent"
                 >

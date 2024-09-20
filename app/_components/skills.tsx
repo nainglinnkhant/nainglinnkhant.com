@@ -77,7 +77,10 @@ export function Skills() {
         Skills
       </h3>
 
-      <ul className="flex flex-wrap items-center gap-x-6 gap-y-3">
+      <ul
+        aria-label="Skills"
+        className="flex flex-wrap items-center gap-x-6 gap-y-3"
+      >
         {SKILLS.map((skill) => {
           const Icon = skill.icon
 

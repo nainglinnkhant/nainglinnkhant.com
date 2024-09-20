@@ -40,6 +40,7 @@ const PROJECTS = [
         </Link>{" "}
         made a video about it and you can watch the video{" "}
         <Link
+          aria-label="Video about scribble"
           href="https://www.youtube.com/watch?v=p-QgenD1Yrc"
           target="_blank"
           rel="noopener noreferrer"
@@ -183,29 +184,44 @@ export async function Projects() {
               <div className="flex items-center gap-6">
                 <div className="flex items-center gap-1.5">
                   <Star className="size-4 text-neutral-400" />
-                  <span className="text-sm font-medium text-neutral-400">
+                  <span
+                    aria-hidden="true"
+                    className="text-sm font-medium text-neutral-400"
+                  >
                     {project.stargazers_count}
+                  </span>
+                  <span className="sr-only">
+                    {`${project.stargazers_count} stars`}
                   </span>
                 </div>
 
                 <div className="flex items-center gap-1.5">
                   <GitFork className="size-4 text-neutral-400" />
-                  <span className="text-sm font-medium text-neutral-400">
+                  <span
+                    aria-hidden="true"
+                    className="text-sm font-medium text-neutral-400"
+                  >
                     {project.forks_count}
+                  </span>
+                  <span className="sr-only">
+                    {`${project.forks_count} forks`}
                   </span>
                 </div>
               </div>
 
-              <div className="mt-2 flex flex-wrap items-center gap-2">
+              <ul
+                aria-label="Tech stack"
+                className="mt-2 flex flex-wrap items-center gap-2"
+              >
                 {project.tags?.map((tag) => (
-                  <div
+                  <li
                     key={tag}
                     className="rounded border border-neutral-700/50 bg-accent px-1.5 py-0.5 text-xs font-medium"
                   >
                     {tag}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </MagicCard>
           </div>
         ))}
