@@ -34,6 +34,7 @@ export function Contact() {
       </p>
 
       <Link
+        aria-label="Contact me via email"
         href="mailto:nainglinnkhnt@gmail.com"
         className={cn(buttonVariants(), "self-center rounded-full")}
       >

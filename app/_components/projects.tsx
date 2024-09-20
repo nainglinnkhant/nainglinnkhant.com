@@ -147,7 +147,9 @@ export async function Projects() {
                             "h-auto p-0 hover:bg-transparent active:bg-transparent"
                           )}
                         >
-                          <span className="sr-only">View source code</span>
+                          <span className="sr-only">
+                            View source code of {project.name}
+                          </span>
                           <GitHubIcon className="size-4" />
                         </Link>
                       </TooltipTrigger>
@@ -167,7 +169,9 @@ export async function Projects() {
                             "h-auto p-0 hover:bg-transparent active:bg-transparent"
                           )}
                         >
-                          <span className="sr-only">Visit website</span>
+                          <span className="sr-only">
+                            Visit website of {project.name}
+                          </span>
                           <ExternalLink className="size-4" />
                         </Link>
                       </TooltipTrigger>
