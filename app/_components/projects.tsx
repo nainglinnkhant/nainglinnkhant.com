@@ -34,7 +34,7 @@ const PROJECTS = [
           href="https://www.youtube.com/@joshtriedcoding"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-white"
+          className="underline decoration-muted-foreground decoration-1 underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
         >
           @joshtriedcoding
         </Link>{" "}
@@ -44,7 +44,7 @@ const PROJECTS = [
           href="https://www.youtube.com/watch?v=p-QgenD1Yrc"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline hover:text-white"
+          className="underline decoration-muted-foreground decoration-1 underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
         >
           here
         </Link>
