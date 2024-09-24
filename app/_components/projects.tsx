@@ -107,9 +107,9 @@ export async function Projects() {
 
   return (
     <SectionShell id="projects" className="pt-20">
-      <h3 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         Projects
-      </h3>
+      </h2>
 
       <div className="grid grid-cols-1 gap-6">
         {projects.map((project) => (

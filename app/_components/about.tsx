@@ -9,9 +9,9 @@ import { SOCIAL_LINKS } from "./contact"
 export function About() {
   return (
     <SectionShell className="flex flex-col gap-4">
-      <h3 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         About me
-      </h3>
+      </h2>
       <p>
         A dedicated software engineer with an inquisitive, detail-oriented,
         open-minded, and responsible mindset. My excitement lies in trying out

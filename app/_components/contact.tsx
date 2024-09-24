@@ -24,9 +24,9 @@ export const SOCIAL_LINKS = [
 export function Contact() {
   return (
     <SectionShell id="contact" className="flex flex-col gap-6 py-32">
-      <h3 className="bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-center text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-center text-xl font-bold text-transparent lg:text-2xl">
         Contact
-      </h3>
+      </h2>
 
       <p className="text-center text-neutral-100">
         Wanna know more about my work? Got any questions? <br /> Or just want to

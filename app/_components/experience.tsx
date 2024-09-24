@@ -12,9 +12,9 @@ export async function Experience() {
 
   return (
     <SectionShell id="experience" className="pt-20">
-      <h3 className="mb-6 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="mb-6 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
         Work experience
-      </h3>
+      </h2>
 
       <div className="flex flex-col gap-5">
         {experiences.map((experience) => (
