@@ -1,14 +1,35 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
+import { getPlaiceholder } from "plaiceholder"
 
 import { getExperiences } from "@/lib/notion"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { SectionShell } from "@/components/section-shell"
 
+const FALLBACK_BLUR_URL =
+  "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAIAAABuYg/PAAAAKklEQVR4nO3NQQEAAAQEMCS/6FLw2gqsk9SXeZtkMplMJpPJZDKZTCY7tzObAciPXSbJAAAAAElFTkSuQmCC"
+
+export async function getBlurUrl(imageUrl: string) {
+  try {
+    const res = await fetch(imageUrl)
+    if (!res.ok) throw new Error("Failed to fetch the image.")
+    const buffer = await res.arrayBuffer()
+    const { base64 } = await getPlaiceholder(Buffer.from(buffer))
+    return base64
+  } catch (error) {
+    if (error instanceof Error) {
+      console.log(error.message)
+    }
+  }
+}
+
 export async function Experience() {
   const experiences = await getExperiences()
+  const blurUrls = await Promise.all(
+    experiences.map((experience) => getBlurUrl(experience.companyImageUrl))
+  )
 
   return (
     <SectionShell id="experience" className="pt-20">
@@ -16,9 +37,9 @@ export async function Experience() {
         Work experience
       </h2>
 
-      <div className="flex flex-col gap-5">
-        {experiences.map((experience) => (
-          <div key={experience.companyName} className="flex justify-between">
+      <ul className="flex flex-col gap-5">
+        {experiences.map((experience, index) => (
+          <li key={experience.companyName} className="flex justify-between">
             <div className="flex items-center gap-4">
               <div className="rounded-full border p-1">
                 <Image
@@ -26,6 +47,8 @@ export async function Experience() {
                   alt={`${experience.companyName} logo`}
                   width={36}
                   height={36}
+                  placeholder="blur"
+                  blurDataURL={blurUrls[index] || FALLBACK_BLUR_URL}
                   className="size-9 rounded-full border-border"
                   unoptimized
                 />
@@ -58,9 +81,9 @@ export async function Experience() {
             </div>
 
             <p className="text-sm text-neutral-400">{experience.duration}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </SectionShell>
   )
 }
