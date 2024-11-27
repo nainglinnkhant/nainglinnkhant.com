@@ -6,7 +6,7 @@ import { Projects } from "./_components/projects"
 import { SiteNavigation } from "./_components/site-navigation"
 import { Skills } from "./_components/skills"
 
-export const revalidate = 60 * 60 * 5
+export const revalidate = 18000
 
 export default function Home() {
   return (
