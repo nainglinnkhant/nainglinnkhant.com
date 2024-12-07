@@ -18,12 +18,14 @@ export function SiteNavigation() {
 
   return (
     <nav aria-label="Site navigation" className="fixed z-50 w-screen">
-      <ul
-        className={cn(
-          "absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-4 rounded-full border bg-background px-[22px] py-2 shadow-xl backdrop-blur-md supports-[backdrop-filter]:bg-background/40",
-          !isScrolled && "bg-gradient-to-r from-neutral-900 to-background"
-        )}
-      >
+      <ul className="absolute left-1/2 top-4 flex -translate-x-1/2 items-center gap-4 rounded-full border px-[22px] py-2 shadow-xl">
+        <div
+          className={cn(
+            "backdrop",
+            !isScrolled && "bg-gradient-to-r from-neutral-900 to-background"
+          )}
+        />
+        <div className="backdrop-edge" />
         {NAV_ITEMS.map((item) => (
           <li key={item.title} className="last:hidden last:sm:list-item">
             <Link
