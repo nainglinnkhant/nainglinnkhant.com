@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { BlueskyIcon } from "@/components/icons/bluesky-icon"
 import { GitHubIcon } from "@/components/icons/github-icon"
 import { LinkedinIcon } from "@/components/icons/linkedin-icon"
 import { XLogoIcon } from "@/components/icons/x-logo-icon"
@@ -19,6 +20,11 @@ export const SOCIAL_LINKS = [
     icon: LinkedinIcon,
   },
   { name: "X", link: "https://x.com/nainglk", icon: XLogoIcon },
+  {
+    name: "Bluesky",
+    link: "https://bsky.app/profile/nainglinnkhant.bsky.social",
+    icon: BlueskyIcon,
+  },
 ]
 
 export function Contact() {
