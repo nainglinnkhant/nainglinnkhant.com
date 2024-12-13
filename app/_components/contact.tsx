@@ -22,7 +22,7 @@ export const SOCIAL_LINKS = [
   { name: "X", link: "https://x.com/nainglk", icon: XLogoIcon },
   {
     name: "Bluesky",
-    link: "https://bsky.app/profile/nainglinnkhant.bsky.social",
+    link: "https://bsky.app/profile/nainglinnkhant.com",
     icon: BlueskyIcon,
   },
 ]
