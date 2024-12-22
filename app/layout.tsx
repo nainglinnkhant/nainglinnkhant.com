@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
@@ -9,7 +9,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: siteConfig.title,
