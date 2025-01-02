@@ -144,7 +144,7 @@ export async function Projects() {
                           rel="noopener noreferrer"
                           className={cn(
                             buttonVariants({ variant: "ghost" }),
-                            "h-auto p-0 hover:bg-transparent active:bg-transparent"
+                            "tap-target h-auto p-0 hover:bg-transparent active:bg-transparent"
                           )}
                         >
                           <span className="sr-only">
@@ -166,7 +166,7 @@ export async function Projects() {
                           rel="noopener noreferrer"
                           className={cn(
                             buttonVariants({ variant: "ghost" }),
-                            "h-auto p-0 hover:bg-transparent active:bg-transparent"
+                            "tap-target h-auto p-0 hover:bg-transparent active:bg-transparent"
                           )}
                         >
                           <span className="sr-only">

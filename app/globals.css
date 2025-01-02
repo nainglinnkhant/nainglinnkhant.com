@@ -96,6 +96,22 @@ html {
   border-radius: 9999px;
 }
 
+.tap-target {
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .tap-target::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
+  }
+}
+
 @supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
   .backdrop {
     background-color: hsl(var(--background) / 0.4);

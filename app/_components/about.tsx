@@ -29,7 +29,7 @@ export function About() {
       <p>You can find me on:</p>
       <ul
         aria-label="Social and contact links"
-        className="flex items-center gap-4 pb-1"
+        className="flex items-center gap-5 pb-1"
       >
         {SOCIAL_LINKS.map((link) => {
           const Icon = link.icon
@@ -42,7 +42,7 @@ export function About() {
                 rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ size: "icon", variant: "ghost" }),
-                  "size-auto rounded-full hover:bg-transparent active:bg-transparent"
+                  "tap-target size-auto rounded-full hover:bg-transparent active:bg-transparent"
                 )}
               >
                 <span className="sr-only">{link.name}</span>

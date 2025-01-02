@@ -62,7 +62,7 @@ export function Contact() {
                 rel="noopener noreferrer"
                 className={cn(
                   buttonVariants({ size: "icon", variant: "ghost" }),
-                  "size-auto rounded-full hover:bg-transparent active:bg-transparent"
+                  "tap-target size-auto rounded-full hover:bg-transparent active:bg-transparent"
                 )}
               >
                 <span className="sr-only">{link.name}</span>
