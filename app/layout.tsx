@@ -9,7 +9,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 import "./globals.css"
 
-const inter = Geist({ subsets: ["latin"] })
+const geist = Geist({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: siteConfig.title,
@@ -68,7 +68,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={cn(inter.className, "bg-neutral-950 antialiased")}>
+      <body className={cn(geist.className, "bg-neutral-950 antialiased")}>
         {children}
         <Analytics />
         <SpeedInsights />
