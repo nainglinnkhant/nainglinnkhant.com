@@ -50,7 +50,7 @@ export async function Experience() {
                   height={36}
                   placeholder="blur"
                   blurDataURL={blurUrls[index] || FALLBACK_BLUR_URL}
-                  className="size-9 rounded-full border-border"
+                  className="size-9 rounded-full border-border object-cover"
                   unoptimized
                 />
               </div>
