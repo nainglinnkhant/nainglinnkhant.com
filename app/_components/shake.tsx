@@ -1,7 +1,7 @@
 "use client"
 
+import { type MotionProps, type MotionStyle, motion } from "framer-motion"
 import { useState } from "react"
-import { motion, type MotionProps, type MotionStyle } from "framer-motion"
 
 export function Shake({
   children,

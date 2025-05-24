@@ -1,12 +1,12 @@
 import Link from "next/link"
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
 import { BlueskyIcon } from "@/components/icons/bluesky-icon"
 import { GitHubIcon } from "@/components/icons/github-icon"
 import { LinkedinIcon } from "@/components/icons/linkedin-icon"
 import { XLogoIcon } from "@/components/icons/x-logo-icon"
 import { SectionShell } from "@/components/section-shell"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 export const SOCIAL_LINKS = [
   {
@@ -30,7 +30,7 @@ export const SOCIAL_LINKS = [
 export function Contact() {
   return (
     <SectionShell id="contact" className="flex flex-col gap-6 py-32">
-      <h2 className="bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-center text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-center font-bold text-transparent text-xl lg:text-2xl">
         Contact
       </h2>
 

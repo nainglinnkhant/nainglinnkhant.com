@@ -112,7 +112,8 @@ html {
   }
 }
 
-@supports (backdrop-filter: blur(16px)) or (-webkit-backdrop-filter: blur(16px)) {
+@supports (backdrop-filter: blur(16px)) or
+  (-webkit-backdrop-filter: blur(16px)) {
   .backdrop {
     background-color: hsl(var(--background) / 0.4);
     backdrop-filter: blur(16px);
@@ -130,8 +131,10 @@ html {
   }
 }
 
-@supports (backdrop-filter: blur(12px)) or (-webkit-backdrop-filter: blur(12px))
-  or (mask-image: none) or (-webkit-mask-image: none) {
+@supports (backdrop-filter: blur(12px)) or
+  (-webkit-backdrop-filter: blur(12px)) or
+  (mask-image: none) or
+  (-webkit-mask-image: none) {
   .backdrop-edge {
     position: absolute;
     inset: 0;

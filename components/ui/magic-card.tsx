@@ -24,6 +24,7 @@ export function MagicCard({
   const mouseY = useMotionValue(0)
 
   return (
+    // biome-ignore lint/nursery/noStaticElementInteractions: <explanation>
     <div
       onMouseMove={(e) => {
         const { left, top } = e.currentTarget.getBoundingClientRect()
@@ -38,7 +39,7 @@ export function MagicCard({
     >
       <div className={cn("relative z-10 size-full", className)}>{children}</div>
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+        className="-inset-px pointer-events-none absolute rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
         style={{
           background: useMotionTemplate`
 						radial-gradient(${gradientSize}px circle at ${mouseX}px ${mouseY}px, ${gradientColor}, transparent 100%)

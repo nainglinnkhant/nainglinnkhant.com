@@ -1,15 +1,15 @@
 import Link from "next/link"
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
 import { SectionShell } from "@/components/section-shell"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 import { SOCIAL_LINKS } from "./contact"
 
 export function About() {
   return (
     <SectionShell className="flex flex-col gap-4 overflow-hidden">
-      <h2 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="mb-2 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text font-bold text-transparent text-xl lg:text-2xl">
         About me
       </h2>
       <p>

@@ -1,12 +1,12 @@
 "use client"
 
-import { useRef } from "react"
 import {
-  motion,
-  useInView,
   type MotionProps,
   type Variants,
+  motion,
+  useInView,
 } from "framer-motion"
+import { useRef } from "react"
 
 const list: Variants = {
   hidden: { opacity: 0 },

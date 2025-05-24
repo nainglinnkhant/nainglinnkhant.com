@@ -1,4 +1,4 @@
-import { clsx, type ClassValue } from "clsx"
+import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
@@ -24,7 +24,6 @@ export function getHasTouchScreen() {
       hasTouchScreen = true // deprecated, but good fallback
     } else {
       // Only as a last resort, fall back to user agent sniffing
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
       const UA = (navigator as { userAgent: string }).userAgent
       hasTouchScreen =
         /\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||

@@ -1,5 +1,3 @@
-/* eslint-disable */
-
 import "server-only"
 
 import { Client } from "@notionhq/client"
@@ -24,13 +22,16 @@ export async function getExperiences(): Promise<Experience[]> {
       },
     ],
   })
-  return response.results
-    .map((item) => (item as any).properties)
-    .map((item) => ({
-      companyName: item.company_name.title[0]?.plain_text,
-      companyLink: item.company_link.rich_text[0]?.plain_text || null,
-      companyImageUrl: item.company_image.url,
-      position: item.position.rich_text[0]?.plain_text,
-      duration: item.duration.rich_text[0]?.plain_text,
-    }))
+  return (
+    response.results
+      // biome-ignore lint/suspicious/noExplicitAny: <explanation>
+      .map((item) => (item as any).properties)
+      .map((item) => ({
+        companyName: item.company_name.title[0]?.plain_text,
+        companyLink: item.company_link.rich_text[0]?.plain_text || null,
+        companyImageUrl: item.company_image.url,
+        position: item.position.rich_text[0]?.plain_text,
+        duration: item.duration.rich_text[0]?.plain_text,
+      }))
+  )
 }

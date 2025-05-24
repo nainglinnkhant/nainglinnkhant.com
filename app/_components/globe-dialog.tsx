@@ -26,7 +26,7 @@ export function GlobeDialog({ children }: GlobeDialogProps) {
         <DialogOverlay />
         <DialogContent
           onOpenAutoFocus={(e) => e.preventDefault()}
-          className="fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2"
+          className="-translate-x-1/2 -translate-y-1/2 fixed top-1/2 left-1/2 z-50"
         >
           <DialogTitle className="sr-only">Globe</DialogTitle>
           <DialogDescription className="sr-only">

@@ -23,7 +23,7 @@ export default function Home() {
         <Contact />
       </main>
       <footer className="py-8">
-        <p className="text-center text-sm font-semibold text-neutral-400">
+        <p className="text-center font-semibold text-neutral-400 text-sm">
           Crafted by Naing Linn Khant &copy; {new Date().getFullYear()}
         </p>
       </footer>

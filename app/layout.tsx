@@ -1,11 +1,11 @@
-import type { Metadata } from "next"
-import { Geist } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import type { Metadata } from "next"
+import { Geist } from "next/font/google"
 
+import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 import "./globals.css"
 

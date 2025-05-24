@@ -1,7 +1,7 @@
 "use client"
 
-import { useCallback, useEffect, useRef } from "react"
 import createGlobe, { type COBEOptions } from "cobe"
+import { useCallback, useEffect, useRef } from "react"
 import { useSpring } from "react-spring"
 
 import { cn } from "@/lib/utils"
@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 const GLOBE_CONFIG: COBEOptions = {
   width: 800,
   height: 800,
+  // biome-ignore lint/suspicious/noEmptyBlockStatements: <explanation>
   onRender: () => {},
   devicePixelRatio: 2,
   phi: 0,
@@ -47,18 +48,20 @@ export function Globe({
 
   const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value
-    canvasRef.current!.style.cursor = value ? "grabbing" : "grab"
+    if (canvasRef.current) {
+      canvasRef.current.style.cursor = value ? "grabbing" : "grab"
+    }
   }
 
   const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current
       pointerInteractionMovement.current = delta
-      // eslint-disable-next-line @typescript-eslint/no-floating-promises
       api.start({ r: delta / 200 })
     }
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   const onRender = useCallback(
     (state: Record<string, unknown>) => {
       if (!pointerInteracting.current) phi += 0.005
@@ -75,11 +78,14 @@ export function Globe({
     }
   }
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     window.addEventListener("resize", onResize)
     onResize()
 
-    const globe = createGlobe(canvasRef.current!, {
+    if (!canvasRef.current) return
+
+    const globe = createGlobe(canvasRef.current, {
       ...GLOBE_CONFIG,
       ...config,
       width: width * 2,
@@ -87,9 +93,12 @@ export function Globe({
       onRender,
     })
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"))
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1"
+      }
+    })
     return () => globe.destroy()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

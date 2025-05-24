@@ -1,0 +1,30 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "files": {
+    "ignoreUnknown": false,
+    "ignore": ["node_modules/**", ".next/**", "dist/**"]
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useBlockStatements": "off"
+      },
+      "performance": {
+        "useTopLevelRegex": "off"
+      },
+      "correctness": {
+        "noUndeclaredVariables": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double",
+      "semicolons": "asNeeded"
+    }
+  },
+  "extends": ["ultracite"]
+}

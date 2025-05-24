@@ -1,7 +1,8 @@
-import Link from "next/link"
 import { ExternalLink, GitFork, Star } from "lucide-react"
+import Link from "next/link"
 
-import { cn } from "@/lib/utils"
+import { GitHubIcon } from "@/components/icons/github-icon"
+import { SectionShell } from "@/components/section-shell"
 import { buttonVariants } from "@/components/ui/button"
 import { MagicCard } from "@/components/ui/magic-card"
 import {
@@ -10,8 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { GitHubIcon } from "@/components/icons/github-icon"
-import { SectionShell } from "@/components/section-shell"
+import { cn } from "@/lib/utils"
 
 const PROJECTS = [
   {
@@ -34,7 +34,7 @@ const PROJECTS = [
           href="https://www.youtube.com/@joshtriedcoding"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-muted-foreground decoration-1 underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
+          className="underline decoration-1 decoration-muted-foreground underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
         >
           @joshtriedcoding
         </Link>{" "}
@@ -44,7 +44,7 @@ const PROJECTS = [
           href="https://www.youtube.com/watch?v=p-QgenD1Yrc"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline decoration-muted-foreground decoration-1 underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
+          className="underline decoration-1 decoration-muted-foreground underline-offset-[2.5px] hover:text-white hover:decoration-foreground"
         >
           here
         </Link>
@@ -101,13 +101,14 @@ export async function Projects() {
     PROJECTS.map((project) => getProjectByName(project.name))
   )
   const projects = projectsRes.map((project) => {
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
     const currentProject = PROJECTS.find((p) => p.name === project.name)!
     return { ...project, ...currentProject }
   })
 
   return (
     <SectionShell id="projects" className="pt-20">
-      <h2 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text text-xl font-bold text-transparent lg:text-2xl">
+      <h2 className="mb-8 bg-gradient-to-r from-neutral-300 to-neutral-700 bg-clip-text font-bold text-transparent text-xl lg:text-2xl">
         Projects
       </h2>
 
@@ -115,7 +116,7 @@ export async function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="rounded-lg bg-gradient-to-br from-neutral-500/50 to-neutral-950 to-90% p-px"
+            className="rounded-lg bg-gradient-to-br from-neutral-500/50 to-90% to-neutral-950 p-px"
           >
             <MagicCard
               wrapperClassName="rounded-lg px-4 pb-4 pt-3 bg-gradient-to-br from-neutral-900 to-neutral-950 to-90%"
@@ -128,7 +129,7 @@ export async function Projects() {
                   rel="noopener noreferrer"
                   className={cn(
                     buttonVariants({ variant: "ghost" }),
-                    "h-auto p-0 text-base font-semibold hover:bg-transparent hover:underline active:bg-transparent"
+                    "h-auto p-0 font-semibold text-base hover:bg-transparent hover:underline active:bg-transparent"
                   )}
                 >
                   {project.name}
@@ -190,7 +191,7 @@ export async function Projects() {
                   <Star className="size-4 text-neutral-400" />
                   <span
                     aria-hidden="true"
-                    className="text-sm font-medium text-neutral-400"
+                    className="font-medium text-neutral-400 text-sm"
                   >
                     {project.stargazers_count}
                   </span>
@@ -203,7 +204,7 @@ export async function Projects() {
                   <GitFork className="size-4 text-neutral-400" />
                   <span
                     aria-hidden="true"
-                    className="text-sm font-medium text-neutral-400"
+                    className="font-medium text-neutral-400 text-sm"
                   >
                     {project.forks_count}
                   </span>
@@ -220,7 +221,7 @@ export async function Projects() {
                 {project.tags?.map((tag) => (
                   <li
                     key={tag}
-                    className="rounded border border-neutral-700/50 bg-accent px-1.5 py-0.5 text-xs font-medium"
+                    className="rounded border border-neutral-700/50 bg-accent px-1.5 py-0.5 font-medium text-xs"
                   >
                     {tag}
                   </li>
